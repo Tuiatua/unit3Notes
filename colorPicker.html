@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <style>
+    .red{
+      background-color:red;
+    }
+    .green{
+      background-color: green;
+    }
+    .blue{
+      background-color: blue;
+    }
+    .pink{
+      color: pink;
+    }
+    .teal{
+      color: teal;
+    }
+    .purple{
+      color: purple;
+    }
+    .wheat{
+      background-color: wheat;
+    }
+    .mint{
+      background-color: aquamarine;
+    }
+    .yellow{
+      background-color: yellow;
+    }
+    .content{
+      width: 700px;
+    }
+    .coral{
+      color: lightcoral;
+    }
+    .navy{
+      color: cornflowerblue;
+    }
+    .orange{
+      color: orangered;
+    }
+
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="content">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+      aliqua. Gravida quis blandit turpis cursus in. Nibh mauris cursus mattis molestie a iaculis. Ac turpis egestas maecenas
+      pharetra convallis. Enim facilisis gravida neque convallis a cras. Maecenas ultricies mi eget mauris pharetra. Diam
+      maecenas sed enim ut sem viverra. Lectus mauris ultrices eros in cursus.</p>
+    <div class="row">
+      <h3>Background</h3>
+      <button id="1">RED</button>
+      <button id="2">GREEN</button>
+      <button id="3">BLUE</button>
+      <button id="a">WHEAT</button>
+      <button id="b">MINT</button>
+      <button id="c">YELLOW</button>
+    </div>
+    <div class="row">
+      <h3>Text</h3>
+      <button id="4">PINK</button>
+      <button id="5">TEAL</button>
+      <button id="6">PURPLE</button>
+      <button id="d">CORAL</button>
+      <button id="e">NAVY</button>
+      <button id="f">ORANGE</button>
+    </div>
+    <button id="clear">CLEAR</button>
+  </div>
+</div>
+<script>
+  const content = document.querySelector('.content');
+  const red = document.getElementById('1');
+  const green = document.getElementById('2');
+  const blue = document.getElementById('3');
+  const wheat = document.getElementById('a');
+  const mint = document.getElementById('b');
+  const yellow = document.getElementById('c');
+
+  const pink = document.getElementById('4');
+  const teal = document.getElementById('5');
+  const purple = document.getElementById('6');
+  const coral = document.getElementById('d');
+  const navy = document.getElementById('e');
+  const orange = document.getElementById('f');
+
+  const clearButton = document.getElementById('clear');
+
+  red.addEventListener('click', function(e){
+    removeBGColor()
+    content.classList.add('red');
+  });
+
+  green.addEventListener('click', function(e){
+    removeBGColor()
+    content.classList.add('green');
+  });
+
+  blue.addEventListener('click', function(e){
+    removeBGColor()
+    content.classList.add('blue');
+  });
+
+  wheat.addEventListener('click', function(e){
+    removeBGColor()
+    content.classList.add('wheat');
+  });
+
+  mint.addEventListener('click', function(e){
+    removeBGColor()
+    content.classList.add('mint');
+  });
+
+  yellow.addEventListener('click', function(e){
+    removeBGColor()
+    content.classList.add('yellow');
+  });
+
+  pink.addEventListener('click', function(e){
+    removeTextColor()
+    content.classList.add('pink');
+  });
+
+  teal.addEventListener('click', function(e){
+    removeTextColor()
+    content.classList.add('teal');
+  });
+
+  purple.addEventListener('click', function(e){
+    removeTextColor()
+    content.classList.add('purple');
+  });
+
+  coral.addEventListener('click', function(e){
+    removeTextColor()
+    content.classList.add('coral');
+  });
+
+  navy.addEventListener('click', function(e){
+    removeTextColor()
+    content.classList.add('navy');
+  });
+
+  orange.addEventListener('click', function(e){
+    removeTextColor()
+    content.classList.add('orange');
+  });
+
+  clearButton.addEventListener('click', function(e){
+    removeBGColor()
+    removeTextColor()
+  });
+  function removeBGColor(){
+    content.classList.remove('red');
+    content.classList.remove('green');
+    content.classList.remove('blue');
+    content.classList.remove('wheat');
+    content.classList.remove('mint');
+    content.classList.remove('yellow');
+  }
+
+  function removeTextColor(){
+    content.classList.remove('pink');
+    content.classList.remove('purple');
+    content.classList.remove('teal');
+    content.classList.remove('coral');
+    content.classList.remove('navy');
+    content.classList.remove('orange');
+  }
+</script>
+</body>
+</html>
