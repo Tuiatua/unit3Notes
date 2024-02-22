@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Avatar Chooser</title>
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <style>
+    button{
+      width: 300px;
+      height: 300px;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="content">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Icon-round-Question_mark.jpg/600px-Icon-round-Question_mark.jpg"
+         alt="Question Mark" >
+    <div class="row">
+      <div>
+        <button id="1">Man</button>
+      </div>
+      <div>
+        <button id="2">Good Food</button>
+      </div>
+      <div>
+        <button id="3">Cool App</button>
+      </div>
+      <div>
+        <button id="4">Better Than Water</button>
+      </div>
+      <div>
+        <button id="5">Skullcap</button>
+      </div>
+      <div>
+        <button id="6">Paper Utensils</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  const img = document.querySelector('img');
+  const man = document.getElementById('1');
+  const ham = document.getElementById('2');
+  const pow = document.getElementById('3');
+  const mil = document.getElementById('4');
+  const hel = document.getElementById('5');
+  const pen = document.getElementById('6');
+
+  man.addEventListener('click', function(e){
+    img.src = 'https://upload.wikimedia.org/wikipedia/commons/4/48/Outdoors-man-portrait_%28cropped%29.jpg';
+  });
+
+  ham.addEventListener('click', function(e){
+    img.src = 'https://s7d1.scene7.com/is/image/mcdonalds/mcdonalds-Hamburger-new:1-3-product-tile-desktop?wid=829&hei=515&dpr=off';
+  });
+
+  pow.addEventListener('click', function(e){
+    img.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Microsoft_Office_PowerPoint_%282019%E2%80%93present%29.svg/640px-Microsoft_Office_PowerPoint_%282019%E2%80%93present%29.svg.png';
+  });
+
+  mil.addEventListener('click', function(e){
+    img.src = 'https://target.scene7.com/is/image/Target/GUEST_419f1169-a698-45a1-8d89-ad28136ba841?wid=488&hei=488&fmt=pjpeg';
+  });
+
+  hel.addEventListener('click', function(e){
+    img.src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkKrUrkBfwN0N0uV8EafpulRWbl027OadHiLuRMSNdYbrRm1l2sUv1zAmtqMoyQwFGhjc&usqp=CAU';
+  });
+
+  pen.addEventListener('click', function(e){
+    img.src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTko22aNYSw1D1pMbkBsSG5YU6hkB1UldIOYAg1cHkRDqvKvPcL27-u_iHBCFOp7aG1GlU&usqp=CAU';
+  });
+</script>
+</body>
+</html>
