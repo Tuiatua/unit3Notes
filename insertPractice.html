@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete</title>
+  <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="container">
+  <div class="content">
+    <h3>What is this?</h3>
+    <h4>I don't want this</h4>
+  </div>
+</div>
+<script>
+  const content = document.querySelector('.content');
+  const goblin = document.createElement('h1');
+  const balance = document.createElement('h3');
+
+  content.innerHTML = '<h1>Project Smash Friday</h1><h4>I Wonder Who Was Added</h4>'
+  goblin.innerHTML = 'Spoiler Alert, Its The Goblin';
+  content.append(goblin);
+  balance.innerHTML = 'I Wonder If There Are Any Balance Changes';
+  content.append(balance);
+</script>
+</body>
+</html>
