@@ -14,14 +14,27 @@
 </div>
 <script>
   const content = document.querySelector('.content');
-  const goblin = document.createElement('h1');
+  const goblin = document.createElement('h2');
   const balance = document.createElement('h3');
+  const viking = document.createElement('h2');
+  const good = document.createElement('h1');
+  const nvm = document.createElement('h1');
+  const unwantedElement = document.querySelector('h4');
+  const unwantedElement2 = document.querySelector('#lose');
 
   content.innerHTML = '<h1>Project Smash Friday</h1><h4>I Wonder Who Was Added</h4>'
-  goblin.innerHTML = 'Spoiler Alert, Its The Goblin';
+  goblin.innerHTML = '<h1 id="lose">Spoiler Alert, Its The Goblin</h1>';
   content.append(goblin);
   balance.innerHTML = 'I Wonder If There Are Any Balance Changes';
   content.append(balance);
+  viking.innerHTML = 'I Hope They Revert The Changes On Viking';
+  good.innerHTML = 'Hopefully The New Character Has An Interesting Mechanic';
+  content.append(viking);
+  content.append(good);
+  nvm.innerHTML ='Nvm it was just boxer rework';
+  content.insertAdjacentElement('beforebegin', nvm);
+  unwantedElement.remove();
+  unwantedElement2.remove();
 </script>
 </body>
 </html>
