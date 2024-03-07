@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List</title>
+  <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="container">
+  <div class="content">
+    <div>
+      <label for="ask">Item</label>
+      <input type="text" id="ask" name="ask">
+    </div>
+      <button id="add">Add Item</button>
+    <ul id="list">
+    </ul>
+  </div>
+</div>
+<script>
+  const ask = document.getElementById('ask');
+  const add = document.getElementById('add');
+  const list = document.querySelector('ul');
+
+  function addItem(){
+      let element = document.createElement('li');
+      element.innerHTML = ask.value;
+      element.addEventListener('click', function(e){
+        element.remove();
+      });
+      list.appendChild(element);
+      ask.value = "";
+  }
+
+  add.addEventListener('click', addItem);
+</script>
+</body>
+</html>
