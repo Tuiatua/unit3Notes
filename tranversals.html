@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="container">
+  <div class="content">
+    <ul id="first">
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+    </ul>
+    <ul id="second">
+      <li>a</li>
+      <li>b</li>
+      <li>c</li>
+    </ul>
+  </div>
+</div>
+</body>
+<script>
+  const firstList = document.getElementById('first');
+  const secondList = document.getElementById('second');
+
+  //Drill down one and creates a nodeList. not array, but simular
+  console.log(firstList.children);
+
+  //Prints out every item inside the ul
+  for (let i=0; i<firstList.children.length; i++){
+    console.log(firstList.children[i].textContent);
+  }
+
+  //Prints out every item inside the ul
+  // for (let i=0; i<firstList.nextElementSibling.children.length; i++){
+  // console.log(firstList.nextElementSibling.children[i].textContent);
+  // }
+  // this ^ is the same function as bellow
+  for (let i=0; i<secondList.children.length; i++){
+    console.log(secondList.children[i].textContent);
+  }
+
+  //Goes up one
+  console.log(firstList.parentElement);
+
+  //Gives the next Element on the same lvl (parent / child etc.)
+  console.log(firstList.nextElementSibling);
+
+  //Prints all the children for the previous element on the same level as the one called (secondList in this case)
+  for (let i=0; i<secondList.previousElementSibling.children.length; i++){
+    console.log(secondList.previousElementSibling.children[i].textContent);
+  }
+
+  //if there is no previous element to pull from then null will be returned
+  //same if you go forward with nextElementSibling and there is none to pull from
+  console.log(firstList.previousElementSibling);
+
+  
+</script>
+</html>
