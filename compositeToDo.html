@@ -57,13 +57,23 @@
         item.value = '';
     });
 
-    
+    function des(newRow, descriptionTag){
+        newRow.appendChild(descriptionTag);
+    }
+
+    function act(actionTag, action){
+        actionTag.appendChild(action);
+    }
+
+    function row(newRow, actionTag){
+        newRow.appendChild(actionTag);
+    }
 
     function addItemToIncompleteTable(toDoItem){
         let newRow = document.createElement('tr');
         let descriptionTag = document.createElement('td');
         descriptionTag.textContent = toDoItem;
-        newRow.appendChild(descriptionTag);
+        des(newRow, descriptionTag);
         let actionTag = document.createElement('td');
         let action = document.createElement('button');
         action.textContent = "Mark Complete";
@@ -71,8 +81,8 @@
             newRow.remove();
             addItemToCompleteTable(toDoItem);
         });
-        actionTag.appendChild(action);
-        newRow.appendChild(actionTag)
+        act(actionTag, action);
+        row(newRow, actionTag);
         incomplete.appendChild(newRow);
     }
 
@@ -80,7 +90,7 @@
         let newRow = document.createElement('tr');
         let descriptionTag = document.createElement('td');
         descriptionTag.textContent = toDoItem;
-        newRow.appendChild(descriptionTag);
+        des(newRow, descriptionTag);
         let actionTag = document.createElement('td');
         let action = document.createElement('button');
         action.textContent = "Mark Incomplete";
@@ -88,8 +98,8 @@
             newRow.remove();
             addItemToIncompleteTable(toDoItem);
         });
-        actionTag.appendChild(action);
-        newRow.appendChild(actionTag)
+        act(actionTag, action);
+        row(newRow, actionTag);
         complete.appendChild(newRow);
     }
 </script>
