@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="container">
+  <div class="content">
+
+  </div>
+</div>
+<script>
+  const content = document.querySelector('.content');
+
+  //option1
+  //let op1 = document.createElement('ul');
+  //op1.innerHTMl = '<li><a href="https://www.google.com/?safe=active&ssui=on" target="_blank">Click Me!</a></li>'
+  //content.insertAdjacentElement('beforebegin', op1);
+
+  //option2
+  const newList = document.createElement('ul');
+  const newItem = document.createElement('li');
+  const anchor = document.createElement('a');
+
+  anchor.textContent = "Click Me!";
+  anchor.href = 'https://www.google.com/?safe=active&ssui=on';
+  anchor.target = '_blank';
+
+  newItem.appendChild(anchor)
+  newList.appendChild(newItem);
+  content.appendChild(newList);
+</script>
+</body>
+</html>
