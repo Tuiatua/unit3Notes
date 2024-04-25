@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="container">
+  <div class="content">
+    <button id="three">Disappear</button>
+    <div id="change">
+      <button id="changer">Color</button>
+      <button id="stop">Stop</button>
+    </div>
+  </div>
+</div>
+<script>
+  const dis = document.getElementById('three');
+
+  const box = document.getElementById('change');
+  const changer = document.getElementById('changer');
+
+  let rndcol = ['red', 'green', 'blue', 'pink', 'teal'];
+  let col = rndcol[getRandomInteger(0.7, 5.5)];
+
+  const stop = document.getElementById('stop');
+  let interval;
+
+  function getRandomInteger(min, max){
+    let minRoundedUp = Math.ceil(min);
+    let maxLess = Math.floor(max);
+    return Math.floor(Math.random() * (maxLess - minRoundedUp) + minRoundedUp);
+  }
+
+  dis.addEventListener('click', function(){
+    setTimeout(function(){
+      dis.remove();
+    }, 3000);
+  });
+
+  changer.addEventListener('click', function(){
+    if(!interval){
+      interval = setInterval(function(){
+        console.log('yes');
+        box.style.backgroundColor = col;
+      }, 500);
+    }
+  });
+
+  stop.addEventListener('click', function(){
+    if(interval){
+      clearInterval(interval);
+      interval = null;
+    }
+  });
+</script>
+</body>
+</html>
