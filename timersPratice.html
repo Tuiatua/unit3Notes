@@ -22,7 +22,6 @@
   const changer = document.getElementById('changer');
 
   let rndcol = ['red', 'green', 'blue', 'pink', 'teal'];
-  let col = rndcol[getRandomInteger(0.7, 5.5)];
 
   const stop = document.getElementById('stop');
   let interval;
@@ -42,9 +41,8 @@
   changer.addEventListener('click', function(){
     if(!interval){
       interval = setInterval(function(){
-        console.log('yes');
-        box.style.backgroundColor = col;
-      }, 500);
+        box.style.backgroundColor = rndcol[getRandomInteger(0.7, 5.5)];
+      }, 5000);
     }
   });
 
